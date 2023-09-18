@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+nav {
+    background-color: whitesmoke;
+    overflow: hidden;
+    width: auto;
+    height: auto;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    height: 100px;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+.searchbar {
+    display: flex;
+    align-items: center;
+}
+
+.searchbutton {
+    height: 30px;
+    width: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li:first-child {
+    margin-right: auto;
+}
+
+nav ul li:last-child {
+    margin-left: auto;
+}
+
+.searchbar .searchbutton:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.searchbar .searchbutton {
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.searchbar input[type="text"] {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+nav ul li:hover {
+    background-color: lightgray;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        height: auto;
+    }
+
+    nav ul li {
+        padding: 10px;
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    nav ul li:last-child {
+        margin-left: 0;
+    }
+
+    .searchbar {
+        flex-direction: column;
+    }
+
+    .searchbar input[type="text"] {
+        width: 100%;
+    }
+
+    /* Remove the separators on mobile */
+    .separator {
+        display: none;
+    }
+
+    /* Adjust the size of the search button */
+    .searchbutton {
+        height: 20px;
+        width: 20px;
+    }
+}
